@@ -1,0 +1,20 @@
+title: RDP Brute Force Detection
+id: 111e4567-89ab-cdef-0123-456789abcdef
+status: experimental
+description: Detect repeated failed RDP logon attempts followed by success
+author: Tirthraj Sinh Sisodiya
+date: '2025-08-05'
+references:
+  - 'https://attack.mitre.org/techniques/T1110/'
+tags:
+  - brute-force
+  - attack.t1110
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+    LogonType: 10
+  condition: selection | count by SourceIp, TargetUserName > 10
+level: medium
