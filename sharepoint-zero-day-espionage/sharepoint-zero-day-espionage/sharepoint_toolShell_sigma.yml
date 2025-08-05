@@ -1,0 +1,22 @@
+```yaml
+title: SharePoint ToolShell Zero-Day Exploit Detection
+id: 222e4567-89ab-cdef-0123-456789abcdef
+status: experimental
+description: Detect spoofed POST to ToolPane.aspx followed by GET spinstall0.aspx from same IP
+author: Tirthraj Sinh Sisodiya
+date: '2025-08-05'
+references:
+  - 'https://attack.mitre.org/techniques/T1190/'
+tags:
+  - web-exploit
+  - attack.t1190
+logsource:
+  product: iis
+  service: access
+detection:
+  selection1:
+    method: POST
+    uri_path: '/_layouts/15/ToolPane.aspx'
+    referer: '/_layouts/15/SignOut.aspx'
+  condition: selection1
+level: high
