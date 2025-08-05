@@ -1,0 +1,5 @@
+timestamp,method,uri_path,referer,src_ip,status
+2025-07-17T13:00:00,GET,/layouts/15/ToolPane.aspx?DisplayMode=Edit,-,96.9.125.147,200
+2025-07-17T13:02:00,POST,/layouts/15/ToolPane.aspx,/layouts/SignOut.aspx,96.9.125.147,200
+2025-07-17T13:05:00,GET,/layouts/15/spinstall0.aspx,-,96.9.125.147,200
+2025-07-17T13:10:00,GET,/home.aspx,/default.aspx,198.51.100.25,200
